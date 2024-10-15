@@ -1,0 +1,45 @@
+@import "styles/_variables.scss";
+@import "styles/_breakpoints.scss";
+
+.btn__primary {
+  display: inline-block;
+  box-shadow: 1px 1px 3px $shadow;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: $secondary;
+  color: $white;
+  font-size: 1.2em;
+  cursor: pointer;
+  &:hover {
+    color: $tertiary;
+    background-color: rgba(120,172,235,1);
+    box-shadow: 0px 0px 0px $shadow;
+  }
+}
+
+.btn__secondary {
+  display: inline-block;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: $tertiary;
+  color: $white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: $secondary;
+  color: $white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+  
+  
+  
+  

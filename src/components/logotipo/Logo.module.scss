@@ -1,0 +1,21 @@
+@import "styles/_variables.scss";
+@import "styles/_breakpoints.scss";
+
+
+.containerLogo {
+    transition: all .5s;
+
+    &__link {
+        display: inline-block;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.logo__img {
+    display: inline-block;
+    width: 150px;
+    height: auto;
+}

@@ -1,0 +1,135 @@
+@import "styles/_variables.scss";
+@import "styles/_breakpoints.scss";
+
+.footer {
+    background-color: $primary;
+    display: flex;
+    padding: 8em 0 2em;
+    width: 100%;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 1em;
+        height: auto;
+        max-width: $desktop_sm;
+        padding: 0 1em 4em;
+        width: 100%;
+
+        @media (min-width: $desktop_sm) {
+            grid-template-columns: repeat(12, 1fr);
+            margin: 0 auto;
+            padding: 6em 1em 6em;
+        }
+
+        &__today {
+            grid-column: 1 / span 4;
+            margin-bottom: 4em;
+
+            @media (min-width: $desktop_sm) {
+                grid-column: 5 / span 4;
+                text-align: center;
+            }
+
+            &__title {
+                font-size: 2.5em;
+                color: $white;
+                margin-bottom: 1em
+            }
+
+            &__text {
+                font-size: 1.125em;
+                font-weight: 300;
+                color: $white;
+                margin-bottom: 2.5em
+            }
+
+            &__bigTeam {
+                font-size: 1.125em;
+                font-weight: 300;
+                color: $white;
+                margin: 2.5em 0
+            }
+        }
+
+        &__LogoTxtContainer {
+            grid-column: 1 / span 4;
+            margin-top: 8em;
+
+            @media (min-width: $desktop_sm) {
+                grid-column: 1 / span 3;
+            }
+
+            &__img {
+                text-align: center;
+                width: 100%;
+
+                @media (min-width: $desktop_sm) {
+                    text-align: left;
+                    width: 80%;
+                }
+            }
+
+            &__text {
+                color: $white;
+                margin-top: 2em;
+                font-size: 1.125em;
+                font-weight: 300;
+                text-align: center;
+                line-height: 1.875em;
+
+                @media (min-width: $desktop_sm) {
+                    text-align: left;
+                }
+            }
+        }
+
+        &__productMenu {
+            grid-column: 2 / span 2;
+            text-align: center;
+            margin-top: 4em;
+
+            @media (min-width: $desktop_sm) {
+                text-align: left;
+                grid-column: 5 / span 2;
+                margin-top: 8em;
+            }
+
+            &__title {
+                color: $white;
+                margin-bottom: 1.5em;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            &__list {
+                color: $white;
+
+                &__item {
+                    margin-bottom: 1em;
+
+                    &__link {
+                        color: $white;
+                        font-weight: 300;
+
+                        &:hover {
+                            color: $tertiary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.faIconsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faIcons {
+    width: 3em;
+    height: auto;
+    vertical-align: middle;
+    color: $white;
+}
