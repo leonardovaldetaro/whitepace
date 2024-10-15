@@ -21,6 +21,21 @@ const navProduct = [
     },
 ]
 
+const navResources = [
+    {
+        label: 'Blog',
+        to: 'blog'
+    },
+    {
+        label: 'Guides & tutorials',
+        to: 'guides'
+    },
+    {
+        label: 'Help center',
+        to: 'help'
+    },
+]
+
 
 export default function Footer() {
     return (
@@ -53,7 +68,6 @@ export default function Footer() {
 
                 <section className={Styles.footer__container__productMenu}>
                     <h5 className={Styles.footer__container__productMenu__title}>Product</h5>
-
                     <ul className={Styles.footer__container__productMenu__list}>
                         {navProduct.map((rota, index) => (
                             <li
@@ -69,8 +83,27 @@ export default function Footer() {
                             </li>
                         ))}
                     </ul>
-
                 </section>
+
+                <section className={Styles.footer__container__resourcesMenu}>
+                    <h5 className={Styles.footer__container__resourcesMenu__title}>Resources</h5>
+                    <ul className={Styles.footer__container__resourcesMenu__list}>
+                        {navResources.map((rota, index) => (
+                            <li
+                                className={Styles.footer__container__resourcesMenu__list__item}
+                                key={index}
+                            >
+                                <NavLink
+                                    className={Styles.footer__container__resourcesMenu__list__item__link}
+                                    to={rota.to}
+                                >
+                                    {rota.label}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+
 
             </div>
 

@@ -119,17 +119,41 @@
                 }
             }
         }
+
+        &__resourcesMenu {
+            grid-column: 2 / span 2;
+            text-align: center;
+            margin-top: 4em;
+
+            @media (min-width: $desktop_sm) {
+                text-align: left;
+                grid-column: 7 / span 2;
+                margin-top: 8em;
+            }
+
+            &__title {
+                color: $white;
+                margin-bottom: 1.5em;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            &__list {
+                color: $white;
+
+                &__item {
+                    margin-bottom: 1em;
+
+                    &__link {
+                        color: $white;
+                        font-weight: 300;
+
+                        &:hover {
+                            color: $tertiary;
+                        }
+                    }
+                }
+            }
+        }
     }
-}
-
-.faIconsContainer {
-    display: flex;
-    justify-content: space-between;
-}
-
-.faIcons {
-    width: 3em;
-    height: auto;
-    vertical-align: middle;
-    color: $white;
 }
